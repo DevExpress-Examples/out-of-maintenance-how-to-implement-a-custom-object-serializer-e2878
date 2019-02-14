@@ -1,5 +1,4 @@
-Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.IO
 Imports System.Web.UI
 Imports DevExpress.Utils.Serializing.Helpers
@@ -7,6 +6,7 @@ Imports DevExpress.Utils.Serializing.Helpers
 Namespace ASPxPivotGrid_CustomObjectConverter
 	Partial Public Class _Default
 		Inherits Page
+
 		Protected Overrides Sub OnInit(ByVal e As EventArgs)
 			MyBase.OnInit(e)
 			ASPxPivotGrid1.DataSource = DataHelper.GetData()
@@ -22,7 +22,7 @@ Namespace ASPxPivotGrid_CustomObjectConverter
 		' Handles the Load button's Click event to load pivot grid data from a stream
 		' (requires stream content deserialization).
 		Protected Sub ASPxButton2_Click(ByVal sender As Object, ByVal e As EventArgs)
-			Dim layout As String = CStr(Session("Layout"))
+			Dim layout As String = DirectCast(Session("Layout"), String)
 			If layout Is Nothing Then
 				Return
 			End If
@@ -63,15 +63,15 @@ Namespace ASPxPivotGrid_CustomObjectConverter
 				Return String.Empty
 			End If
 			Dim value As Employee = TryCast(obj, Employee)
-			Return value.FirstName + "#"c + value.LastName + "#"c + value.Age
+			Return value.FirstName & "#"c & value.LastName & AscW("#"c) + value.Age
 		End Function
 
-		' Returns the type by its full name.
-		Public Overloads Function [GetType](ByVal typeName As String) As Type Implements ICustomObjectConverter.GetType
-			If typeName IsNot GetType(Employee).FullName Then
-				Return Nothing
-			End If
-			Return GetType(Employee)
-		End Function
-	End Class
+        ' Returns the type by its full name.
+        Public Overloads Function [GetType](ByVal typeName As String) As Type Implements ICustomObjectConverter.GetType
+            If typeName <> GetType(Employee).FullName Then
+                Return Nothing
+            End If
+            Return GetType(Employee)
+        End Function
+    End Class
 End Namespace

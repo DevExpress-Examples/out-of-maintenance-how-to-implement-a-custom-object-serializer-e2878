@@ -1,11 +1,11 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.Collections
 Imports System.Data
 
 Namespace ASPxPivotGrid_CustomObjectConverter
 	Friend Class Employee
 		Implements IComparable
+
 		Private fFirstName, fLastName As String
 		Private fAge As Integer
 		Public Sub New(ByVal firstName As String, ByVal lastName As String, ByVal age As Integer)
@@ -40,11 +40,11 @@ Namespace ASPxPivotGrid_CustomObjectConverter
 		Public Overrides Function GetHashCode() As Integer
 			Return ToString().GetHashCode()
 		End Function
-		Public Overrides Overloads Function Equals(ByVal obj As Object) As Boolean
+		Public Overrides Function Equals(ByVal obj As Object) As Boolean
 			Return CompareTo(obj) = 0
 		End Function
 		Public Overrides Function ToString() As String
-			Return FirstName & " "c + LastName
+			Return FirstName & " "c & LastName
 		End Function
 		#Region "IComparable Members"
 		Public Function CompareTo(ByVal obj As Object) As Integer Implements IComparable.CompareTo
