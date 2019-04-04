@@ -3,7 +3,7 @@
 
 * [DataHelper.cs](./CS/ASPxPivotGrid_CustomObjectConverter/DataHelper.cs) (VB: [DataHelper.vb](./VB/ASPxPivotGrid_CustomObjectConverter/DataHelper.vb))
 * [Default.aspx](./CS/ASPxPivotGrid_CustomObjectConverter/Default.aspx) (VB: [Default.aspx](./VB/ASPxPivotGrid_CustomObjectConverter/Default.aspx))
-* [Default.aspx.cs](./CS/ASPxPivotGrid_CustomObjectConverter/Default.aspx.cs) (VB: [Default.aspx](./VB/ASPxPivotGrid_CustomObjectConverter/Default.aspx))
+* [Default.aspx.cs](./CS/ASPxPivotGrid_CustomObjectConverter/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/ASPxPivotGrid_CustomObjectConverter/Default.aspx.vb))
 <!-- default file list end -->
 # How to Implement a Custom Object Serializer
 
