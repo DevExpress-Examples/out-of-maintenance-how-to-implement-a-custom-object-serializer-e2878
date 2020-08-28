@@ -6,6 +6,9 @@
 * [Default.aspx.cs](./CS/ASPxPivotGrid_CustomObjectConverter/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/ASPxPivotGrid_CustomObjectConverter/Default.aspx.vb))
 <!-- default file list end -->
 # How to Implement a Custom Object Serializer
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/e2878/)**
+<!-- run online end -->
 
 
 This example demonstrates how to implement a custom serializer. Custom serializers are necessary when the data source field values are custom objects (not numeric or string values).
